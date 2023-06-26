@@ -1,7 +1,8 @@
-﻿using System;
-namespace Fraction
+using Fraction_1;
+using System;
+namespace Fraction_program
 {    
-class Fraction
+class Fraction_1
     {
         static void Main(string[] args)
         {
