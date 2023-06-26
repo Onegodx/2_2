@@ -1,6 +1,6 @@
 ﻿using System;
 
-
+//Minkov Vladimir 15 variant 22исп21
 namespace Fraction
 {
     class Fraction
