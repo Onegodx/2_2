@@ -1,12 +1,13 @@
 ﻿using System;
 
 //Minkov Vladimir 15 variant 22исп21
-namespace Fraction
+
+namespace Fraction_1
 {
     class Fraction
     {
-        private long numerator; // числитель
-        private ulong denominator; // знаменатель
+        private long numerator;
+        private ulong denominator; 
 
         public Fraction(long numerator, ulong denominator)
         {
@@ -28,11 +29,9 @@ namespace Fraction
         {
             ulong lcm = LCM(a.denominator, b.denominator);
 
-            // приводим знаменатели к общему знаменателю
             long numerator = a.numerator * (long)(lcm / a.denominator) +
                 b.numerator * (long)(lcm / b.denominator);
 
-            // сокращаем дробь
             Reduce(ref numerator, ref lcm);
 
             return new Fraction(numerator, lcm);
@@ -42,11 +41,11 @@ namespace Fraction
         {
             ulong lcm = LCM(a.denominator, b.denominator);
 
-            // приводим знаменатели к общему знаменателю
+
             long numerator = a.numerator * (long)(lcm / a.denominator) -
                 b.numerator * (long)(lcm / b.denominator);
 
-            // сокращаем дробь
+
             Reduce(ref numerator, ref lcm);
 
             return new Fraction(numerator, lcm);
@@ -54,7 +53,7 @@ namespace Fraction
 
         public static Fraction operator *(Fraction a, Fraction b)
         {
-            // перемножаем числитель и знаменатель
+
             long numerator = a.numerator * b.numerator;
             ulong denominator = a.denominator * b.denominator;
 
@@ -68,11 +67,11 @@ namespace Fraction
         {
             ulong lcm = LCM(a.denominator, b.denominator);
 
-            // приводим знаменатели к общему знаменателю
+
             long numeratorA = a.numerator * (long)(lcm / a.denominator);
             long numeratorB = b.numerator * (long)(lcm / b.denominator);
 
-            // сравниваем числители
+
             return numeratorA == numeratorB;
         }
 
@@ -85,7 +84,7 @@ namespace Fraction
         {
             ulong lcm = LCM(a.denominator, b.denominator);
 
-            // приводим знаменатели к общему знаменателю
+
             long numeratorA = a.numerator * (long)(lcm / a.denominator);
             long numeratorB = b.numerator * (long)(lcm / b.denominator);
 
@@ -159,7 +158,7 @@ denominator)
             long n = Math.Abs(numerator);
             ulong m = denominator;
 
-            // сокращаем дробь на НОД
+
             ulong gcd = GCD((ulong)n, m);
             n /= (long)gcd;
             m /= gcd;
@@ -178,6 +177,10 @@ denominator)
     }
 
 }
+
+
+
+
 
 
 
