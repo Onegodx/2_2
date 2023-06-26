@@ -1,4 +1,4 @@
-﻿namespace Fraction
+namespace Fraction_base
 {
     internal class FractionBase
     {
