@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace Fraction
+namespace Fraction_helper
 {
     internal static class FractionHelpers
     {
@@ -18,7 +18,7 @@ denominator)
             long n = Math.Abs(numerator);
             ulong m = denominator;
 
-            // сокращаем дробь на НОД
+           
             ulong gcd = GCD((ulong)n, m);
             n /= (long)gcd;
             m /= gcd;
@@ -33,6 +33,11 @@ denominator)
             }
 
             denominator = m;
+        }
+
+        private static ulong GCD(ulong n, ulong m)
+        {
+            throw new NotImplementedException();
         }
     }
 }
